@@ -50,9 +50,9 @@ li {
 	color: #bbb;
 }
 .main-content {
-	font-size: 12px;
+	font-size: 12px !important;
 	color: #333;
-	line-height: 20px;
+	line-height: 25px;
 }
 xmp {
 	background-color: #333;
