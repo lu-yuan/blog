@@ -6,31 +6,31 @@ title: 在github上搭建免费的博客
 <div class="blog-title">{{ page.title }}</div>
 <div class="blog-subtitle">{{ page.date | date_to_string }} | 推荐：lu-yuan</div>
 <div class="main-content">
-      github好多年前，大家都开始玩啦，我这个菜鸟近几年才开始。github不仅可以管理项目，还可以搭建博客。技术人员，一般用的博客为博客园，CSDN多一些。看到朋友们都弄一个，我也开始弄起来，先找点资料看看，然后开始动手了。
+      github好多年前，大家都开始玩啦，我这个菜鸟近几年才开始。github不仅可以管理项目，还可以搭建博客。技术人员，一般用的博客为博客园，CSDN多一些。看到朋友们都弄一个，我也开始弄起来，先找点资料看看，然后开始动手了。<br>
 
-      我的电脑是MAC的，其他系统也差不多。先看看我建博客的过程，已经成功了，而且很好用，大家可以看看我的网址https://lu-yuan.github.io .
+      我的电脑是MAC的，其他系统也差不多。先看看我建博客的过程，已经成功了，而且很好用，大家可以看看我的网址https://lu-yuan.github.io .<br>
 
-　　(1)首先在github上注册账号，可以使用github，https://github.com/join?source=header-home
+　　(1)首先在github上注册账号，可以使用github，https://github.com/join?source=header-home<br>
 
-这个比较简单，填写用户名，邮箱，密码等就可以了。如果有账号了，我们接着看下面。
+这个比较简单，填写用户名，邮箱，密码等就可以了。如果有账号了，我们接着看下面。<br>
 
-　　(2)搭建github博客，需要用的东西，github page, jekyll模板。
+　　(2)搭建github博客，需要用的东西，github page, jekyll模板。<br>
 
-首先打开https://pages.github.com/，按照步骤一步一步来，
+首先打开https://pages.github.com/，按照步骤一步一步来，<br>
 
-第一步，先建一个项目仓库，名称很重要，要和用户名一致。
-<img src="../images/1-1.jpg">
-
-
- 第二步，github客户端下载，超好用的，下载客户端，
-<img src="../images/1-2.jpg">
+第一步，先建一个项目仓库，名称很重要，要和用户名一致。<br>
+<img src="../../../images/1-1.jpg"><br>
 
 
-客户端装成了，
+ 第二步，github客户端下载，超好用的，下载客户端，<br>
+<img src="../../../images/1-2.jpg"><br>
 
-第三步，创建index.html
 
+客户端装成了，<br>
 
+第三步，创建index.html<br>
+
+<pre>
 <!DOCTYPE html>
 <html>
 <body>
@@ -38,84 +38,85 @@ title: 在github上搭建免费的博客
 <p>I'm hosted with GitHub Pages.</p>
 </body>
 </html>
+</pre>
 
  
 
-第四步，先选中change部分，然后commit, 再然后sync
-<img src="../images/1-3.jpg">
+第四步，先选中change部分，然后commit, 再然后sync<br>
+<img src="../../../images/1-3.jpg"><br>
 
 
-第五步，提交成功，浏览页面，https://username.github.io   记得username换成你的用户名
-
- 
-
-github pages完成了，接着jekyll模板部分。
-
-jekyll是静态站点生成器。根据网页源码生成静态文件。提供了模板，变量，插件等功能，用来编写整个网站
-
-第一步，创建项目，
-
-在本地先建个文件夹，blog.
+第五步，提交成功，浏览页面，https://username.github.io   记得username换成你的用户名<br>
 
  
 
-$ mkdir jekyll_demo
+github pages完成了，接着jekyll模板部分。<br>
+
+jekyll是静态站点生成器。根据网页源码生成静态文件。提供了模板，变量，插件等功能，用来编写整个网站<br>
+
+第一步，创建项目，<br>
+
+在本地先建个文件夹，blog.<br>
 
  
 
-对该目录进行git初始化
+$ mkdir jekyll_demo<br>
 
  
 
-$ cd blog
-
-$ git init
+对该目录进行git初始化<br>
 
  
 
-然后，创建一个没有父节点的分支gh-pages。因为github规定，只有该分支中的页面，才会生成网页文件。
+$ cd blog<br>
+
+$ git init<br>
 
  
 
-$ git checkout --orphan gh-pages
+然后，创建一个没有父节点的分支gh-pages。因为github规定，只有该分支中的页面，才会生成网页文件。<br>
 
  
 
-第二步，创建设置文件
-
-在根目录下，创建一个名为_config.yml的文本文件。是jekyll的设置文件，我们在里面填入如下内容，其他设置都可以用默认选项，具体解释参见官方网页
+$ git checkout --orphan gh-pages<br>
 
  
 
-baseurl: /blog
+第二步，创建设置文件<br>
+
+在根目录下，创建一个名为_config.yml的文本文件。是jekyll的设置文件，我们在里面填入如下内容，其他设置都可以用默认选项，具体解释参见官方网页<br>
 
  
 
-现在目录结构变成：
+baseurl: /blog<br>
 
  
 
+现在目录结构变成：<br>
+
+ 
+<pre>
 /blog
 　　　　|--　_config.yml
+</pre>
+ 
+
+第三步，创建模板文件，<br>
 
  
 
-第三步，创建模板文件，
+在根目录下，创建一个_layouts目录，用于存放模板文件，<br>
 
  
 
-在根目录下，创建一个_layouts目录，用于存放模板文件，
+$ mkdir _layouts<br>
 
  
 
-$ mkdir _layouts
+进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容<br>
 
  
-
-进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容
-
- 
-
+<pre>
 　　<!DOCTYPE html>
 
 　　<html>
@@ -135,38 +136,38 @@ $ mkdir _layouts
 　　</body>
 
 　　</html>
-
+</pre>
  
 
-Jekyll使用Liquid模板语言，{{ page.title }}表示文章标题，{{ content }}表示文章内容，更多模板变量请参考官方文档
+Jekyll使用Liquid模板语言，{{ page.title }}表示文章标题，{{ content }}表示文章内容，更多模板变量请参考官方文档<br>
 
-现在目录变为
+现在目录变为<br>
 
  
-
+<pre>
 /blog
 　　　　|--　_config.yml
 　　　　|--　_layouts
 　　　　|　　　|--　default.html
+<pre>
+ 
+
+第四步，创建文章<br>
+
+在根目录，创建名为_posts目录，作为blog的文章。<br>
 
  
 
-第四步，创建文章
-
-在根目录，创建名为_posts目录，作为blog的文章。
+$ mkdir _posts<br>
 
  
 
-$ mkdir _posts
+进入该目录，创建第一篇文章，名为2017-04-19-hello-world.html<br>
+
+在该文件中，填入如下内容，注意行首不能为空格，<br>
 
  
-
-进入该目录，创建第一篇文章，名为2017-04-19-hello-world.html
-
-在该文件中，填入如下内容，注意行首不能为空格，
-
- 
-
+<pre>
 ---
 layout: default
 title: 你好，世界
@@ -177,32 +178,32 @@ title: 你好，世界
 <p>我的第一篇文章</p>
 
 <p>{{ page.date | date_to_string }}</p>
-
+</pre>
  
 
-每篇文章的头部，必须有一个yaml文件头，用来设置一些元数据。它用三根短划线"---"，标记开始和结束，里面每一行设置一种元数据.
+每篇文章的头部，必须有一个yaml文件头，用来设置一些元数据。它用三根短划线"---"，标记开始和结束，里面每一行设置一种元数据.<br>
 
-"layout:default"，表示该文章的模板使用_layouts目录下的default.html文件；"title: 你好，世界"，表示该文章的标题是"你好，世界".
+"layout:default"，表示该文章的模板使用_layouts目录下的default.html文件；"title: 你好，世界"，表示该文章的标题是"你好，世界".<br>
 
-现在目录结构变成：
+现在目录结构变成：<br>
 
  
-
+<pre>
 /blog
 　　　　|--　_config.yml
 　　　　|--　_layouts
 　　　　|　　　|--　default.html 
 　　　　|--　_posts
 　　　　|　　　|--　2012-08-25-hello-world.html
-
+</pre>
  
 
-第五步，创建首页
+第五步，创建首页<br>
 
-在根目录，创建一个index.html文件，填入以下内容
+在根目录，创建一个index.html文件，填入以下内容<br>
 
  
-
+<pre>
 　　---
 　　layout: default
 　　title: 我的Blog
@@ -221,13 +222,13 @@ title: 你好，世界
 　　　　{% endfor %}
 
 　　</ul>
-
+</pre>
  
 
-现在目录结构变成这样，
+现在目录结构变成这样，<br>
 
  
-
+<pre>
 /blog
 　　　　|--　_config.yml
 　　　　|--　_layouts
@@ -235,14 +236,14 @@ title: 你好，世界
 　　　　|--　_posts
 　　　　|　　　|--　2012-08-25-hello-world.html
 　　　　|--　index.html
-
+</pre>
  
 
-第六步，发布内容
+第六步，发布内容<br>
 
-这个简单的blog，可以发布了，在github上创建仓库blog
+这个简单的blog，可以发布了，在github上创建仓库blog<br>
 
- 
+ <pre>
 
 　　$ git add .
 
@@ -251,7 +252,7 @@ title: 你好，世界
 　　$ git remote add origin https://github.com/username/blog.git
 
 　　$ git push origin gh-pages
-
+<pre>
  
 
 note: username换成你的用户名
