@@ -4,7 +4,7 @@ title: 在github上搭建免费的博客
 ---
 <div class="container">
 <div class="blog-title">{{ page.title }}</div>
-<div class="blog-subtitle">{{ page.date | date_to_string }} | 推荐：lu-yuan</div>
+<div class="blog-subtitle">{{ page.date | date: "%Y-%m-%d" }} | 推荐：lu-yuan</div>
 <div class="main-content">
       github好多年前，大家都开始玩啦，我这个菜鸟近几年才开始。github不仅可以管理项目，还可以搭建博客。技术人员，一般用的博客为博客园，CSDN多一些。看到朋友们都弄一个，我也开始弄起来，先找点资料看看，然后开始动手了。<br>
 
@@ -116,7 +116,7 @@ $ mkdir _layouts<br>
 进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容<br>
 
  
-<pre>
+<xmp>
 　　<!DOCTYPE html>
 
 　　<html>
@@ -136,7 +136,7 @@ $ mkdir _layouts<br>
 　　</body>
 
 　　</html>
-</pre>
+</xmp>
  
 
 Jekyll使用Liquid模板语言，{{ page.title }}表示文章标题，{{ content }}表示文章内容，更多模板变量请参考官方文档<br>
@@ -167,7 +167,7 @@ $ mkdir _posts<br>
 在该文件中，填入如下内容，注意行首不能为空格，<br>
 
  
-<pre>
+<xmp>
 ---
 layout: default
 title: 你好，世界
@@ -178,7 +178,7 @@ title: 你好，世界
 <p>我的第一篇文章</p>
 
 <p>{{ page.date | date_to_string }}</p>
-</pre>
+</xmp>
  
 
 每篇文章的头部，必须有一个yaml文件头，用来设置一些元数据。它用三根短划线"---"，标记开始和结束，里面每一行设置一种元数据.<br>
@@ -203,7 +203,7 @@ title: 你好，世界
 在根目录，创建一个index.html文件，填入以下内容<br>
 
  
-<pre>
+<xmp>
 　　---
 　　layout: default
 　　title: 我的Blog
@@ -222,7 +222,7 @@ title: 你好，世界
 　　　　{% endfor %}
 
 　　</ul>
-</pre>
+</xmp>
  
 
 现在目录结构变成这样，<br>
@@ -255,25 +255,25 @@ title: 你好，世界
 <pre>
  
 
-note: username换成你的用户名
+note: username换成你的用户名<br>
 
-打开生成的页面，http://username.github.com/blog/
+打开生成的页面，http://username.github.com/blog/<br>
 
-这个时候，发现，很多年前，这样的网址是可以打开的，现在打不开了。现在github只能打开http://username.github.io
+这个时候，发现，很多年前，这样的网址是可以打开的，现在打不开了。现在github只能打开http://username.github.io<br>
 
-所以仓库做了下调整，
+所以仓库做了下调整，<br>
 
-blog库下的用来看blog文章，
+blog库下的用来看blog文章，<br>
 
-username.github.io库下的用来放首页，可浏览的URL, 及设置文件baseurl.
+username.github.io库下的用来放首页，可浏览的URL, 及设置文件baseurl.<br>
 
-项目文件结构：我的目录结构丰富了些，你也可以做的更丰富更好看，红圈为主要内容
+项目文件结构：我的目录结构丰富了些，你也可以做的更丰富更好看，红圈为主要内容<br>
 
-<img src="../images/1-4.jpg">
+<img src="../../../images/1-4.jpg"><br>
 
-现在你可以使用建好的博客了，为了把页面做的更好看，可以加入CSS, IMAGE, JS等
+现在你可以使用建好的博客了，为了把页面做的更好看，可以加入CSS, IMAGE, JS等<br>
 
-可参考我的库来建博客，http://username.github.io 
+可参考我的库来建博客，http://username.github.io <br>
 </div>
 <!-- <div id="disqus_thread"></div>
 <script type="text/javascript">  
